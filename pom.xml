@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
    Licensed to the Apache Software Foundation (ASF) under one or more
    contributor license agreements.  See the NOTICE file distributed with
    this work for additional information regarding copyright ownership.
@@ -14,8 +13,7 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.apache.commons</groupId>
@@ -50,7 +48,7 @@
     <!-- override parent name, because 2.2 uses different artifactId -->
     <commons.release.2.name>commons-math-${commons.release.2.version}</commons.release.2.name>
     <commons.release.2.desc>(requires Java 1.5+)</commons.release.2.desc>
-    <commons.release.2.binary.suffix></commons.release.2.binary.suffix>
+    <commons.release.2.binary.suffix/>
 
     <commons.jira.id>MATH</commons.jira.id>
     <commons.jira.pid>12310485</commons.jira.pid>
@@ -82,10 +80,10 @@
     <jmh.version>1.13</jmh.version>
     <uberjar.name>benchmarks</uberjar.name>
     <!-- Java8+ requires additional Javadoc qualifier for MathJax (default to empty). -->
-    <allowscript.javadoc.qualifier></allowscript.javadoc.qualifier>
+    <allowscript.javadoc.qualifier/>
     <!-- MathJax requires additional Javadoc qualifier for Java8+ -->
     <!-- default to empty for earlier versions of Java -->
-    <doclint.javadoc.qualifier></doclint.javadoc.qualifier>
+    <doclint.javadoc.qualifier/>
   </properties>
 
   <scm>
@@ -218,7 +216,7 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
+  <dependency><groupId>org.evosuite</groupId><artifactId>evosuite-standalone-runtime</artifactId><version>LATEST</version><scope>test</scope></dependency><dependency><groupId>junit</groupId><artifactId>junit</artifactId><version>4.12</version><scope>test</scope></dependency><dependency><groupId>org.evosuite</groupId><artifactId>evosuite-standalone-runtime</artifactId><version>LATEST</version><scope>test</scope></dependency><dependency><groupId>junit</groupId><artifactId>junit</artifactId><version>4.12</version><scope>test</scope></dependency></dependencies>
 
   <build>
       <plugins>
@@ -294,19 +292,18 @@
             <configuration>
               <target>
                 <jar destfile="${project.build.directory}/${project.artifactId}-${project.version}-tools.jar">
-                  <metainf dir="${basedir}" includes="NOTICE.txt,LICENSE.txt" />
+                  <metainf dir="${basedir}" includes="NOTICE.txt,LICENSE.txt"/>
                   <manifest>
-                    <attribute name="Specification-Title" value="${project.name} Tools" />
-                    <attribute name="Implementation-Title" value="${project.name} Tools" />
-                    <attribute name="Implementation-Vendor" value="${project.organization.name}" />
-                    <attribute name="Implementation-Version" value="${project.version}" />
-                    <attribute name="Implementation-Vendor-Id" value="org.apache" />
+                    <attribute name="Specification-Title" value="${project.name} Tools"/>
+                    <attribute name="Implementation-Title" value="${project.name} Tools"/>
+                    <attribute name="Implementation-Vendor" value="${project.organization.name}"/>
+                    <attribute name="Implementation-Version" value="${project.version}"/>
+                    <attribute name="Implementation-Vendor-Id" value="org.apache"/>
                     <attribute name="Implementation-Build" value="${implementation.build}"/>
-                    <attribute name="X-Compile-Source-JDK" value="${maven.compiler.source}" />
-                    <attribute name="X-Compile-Target-JDK" value="${maven.compiler.target}" />
+                    <attribute name="X-Compile-Source-JDK" value="${maven.compiler.source}"/>
+                    <attribute name="X-Compile-Target-JDK" value="${maven.compiler.target}"/>
                   </manifest>
-                  <fileset dir="${project.build.directory}/test-classes"
-                           includes="org/apache/commons/math4/PerfTestUtils*" />
+                  <fileset dir="${project.build.directory}/test-classes" includes="org/apache/commons/math4/PerfTestUtils*"/>
                 </jar>
               </target>
             </configuration>
@@ -614,18 +611,18 @@
                 <configuration>
                   <tasks>
                     <exec executable="svn">
-                      <arg line="checkout --depth immediates ${commons.scmPubUrl} ${commons.scmPubCheckoutDirectory}" />
+                      <arg line="checkout --depth immediates ${commons.scmPubUrl} ${commons.scmPubCheckoutDirectory}"/>
                     </exec>
 
                     <exec executable="svn">
-                      <arg line="update --set-depth exclude ${commons.scmPubCheckoutDirectory}/javadocs" />
+                      <arg line="update --set-depth exclude ${commons.scmPubCheckoutDirectory}/javadocs"/>
                     </exec>
 
                     <pathconvert pathsep=" " property="dirs">
-                      <dirset dir="${commons.scmPubCheckoutDirectory}" includes="*" />
+                      <dirset dir="${commons.scmPubCheckoutDirectory}" includes="*"/>
                     </pathconvert>
                     <exec executable="svn">
-                      <arg line="update --set-depth infinity ${dirs}" />
+                      <arg line="update --set-depth infinity ${dirs}"/>
                     </exec>
                   </tasks>
                 </configuration>
@@ -768,7 +765,7 @@
       <email>billbarker at apache dot org</email>
     </developer>
     <developer>
-      <name>S&#233;bastien Brisard</name>
+      <name>S?bastien Brisard</name>
       <id>celestin</id>
       <email>celestin at apache dot org</email>
     </developer>
@@ -855,7 +852,7 @@
       <name>Peter Andrews</name>
     </contributor>
     <contributor>
-      <name>R&#233;mi Arntzen</name>
+      <name>R?mi Arntzen</name>
     </contributor>
     <contributor>
       <name>Matt Adereth</name>
@@ -924,7 +921,7 @@
       <name>Hank Grabowski</name>
     </contributor>
     <contributor>
-      <name>Bernhard Gr&#252;newaldt</name>
+      <name>Bernhard Gr?newaldt</name>
     </contributor>
     <contributor>
       <name>Elliotte Rusty Harold</name>
@@ -1002,7 +999,7 @@
       <name>Andreas Rieger</name>
     </contributor>
     <contributor>
-      <name>S&#233;bastien Riou</name>
+      <name>S?bastien Riou</name>
     </contributor>
     <contributor>
       <name>Karl Richter</name>
@@ -1053,7 +1050,7 @@
       <name>Andrew Waterman</name>
     </contributor>
     <contributor>
-      <name>J&#246;rg Weimar</name>
+      <name>J?rg Weimar</name>
     </contributor>
     <contributor>
       <name>Christian Winter</name>
