@@ -21,7 +21,7 @@ public class AbstractConvergenceChecker_ESTest extends AbstractConvergenceChecke
 
   @Test(timeout = 4000)
   public void test00()  throws Throwable  {
-      SimplePointChecker<Pair<Integer, Integer>> simplePointChecker0 = new SimplePointChecker<Pair<Integer, Integer>>(0.0, 0.0, 856);
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker(0.0, 0.0, 856);
       double double0 = simplePointChecker0.getRelativeThreshold();
       assertEquals(0.0, double0, 0.01);
       assertEquals(0.0, simplePointChecker0.getAbsoluteThreshold(), 0.01);
@@ -29,7 +29,7 @@ public class AbstractConvergenceChecker_ESTest extends AbstractConvergenceChecke
 
   @Test(timeout = 4000)
   public void test01()  throws Throwable  {
-      SimplePointChecker<Pair<Object, Object>> simplePointChecker0 = new SimplePointChecker<Pair<Object, Object>>((-1.0), (-595));
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker((-1.0), (-595));
       double double0 = simplePointChecker0.getRelativeThreshold();
       assertEquals((-595.0), simplePointChecker0.getAbsoluteThreshold(), 0.01);
       assertEquals((-1.0), double0, 0.01);
@@ -37,7 +37,7 @@ public class AbstractConvergenceChecker_ESTest extends AbstractConvergenceChecke
 
   @Test(timeout = 4000)
   public void test02()  throws Throwable  {
-      SimplePointChecker<Pair<String, double[]>> simplePointChecker0 = new SimplePointChecker<Pair<String, double[]>>(0.0, 284.3218043);
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker(0.0, 284.3218043);
       double double0 = simplePointChecker0.getAbsoluteThreshold();
       assertEquals(0.0, simplePointChecker0.getRelativeThreshold(), 0.01);
       assertEquals(284.3218043, double0, 0.01);
@@ -45,7 +45,7 @@ public class AbstractConvergenceChecker_ESTest extends AbstractConvergenceChecke
 
   @Test(timeout = 4000)
   public void test03()  throws Throwable  {
-      SimplePointChecker<Pair<Integer, Object>> simplePointChecker0 = new SimplePointChecker<Pair<Integer, Object>>(0.0, (-2651.313592701597));
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker(0.0, (-2651.313592701597));
       double double0 = simplePointChecker0.getAbsoluteThreshold();
       assertEquals((-2651.313592701597), double0, 0.01);
       assertEquals(0.0, simplePointChecker0.getRelativeThreshold(), 0.01);
@@ -53,7 +53,7 @@ public class AbstractConvergenceChecker_ESTest extends AbstractConvergenceChecke
 
   @Test(timeout = 4000)
   public void test04()  throws Throwable  {
-      SimplePointChecker<Pair<Integer, String>> simplePointChecker0 = new SimplePointChecker<Pair<Integer, String>>((-2691.0), (-2691.0), 1);
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker((-2691.0), (-2691.0), 1);
       Integer integer0 = new Integer((-1));
       Pair<Integer, String> pair0 = new Pair<Integer, String>(integer0, (String) null);
       simplePointChecker0.converged(1220, pair0, pair0);
@@ -65,7 +65,7 @@ public class AbstractConvergenceChecker_ESTest extends AbstractConvergenceChecke
   public void test05()  throws Throwable  {
       double[] doubleArray0 = new double[5];
       doubleArray0[0] = (-1.0);
-      SimplePointChecker<Pair<double[], Integer>> simplePointChecker0 = new SimplePointChecker<Pair<double[], Integer>>((-1.0), (-595));
+      SimplePointChecker<Pair<double[], Integer>> simplePointChecker0 = new SimplePointChecker((-1.0), (-595));
       Integer integer0 = new Integer(53);
       Pair<double[], Integer> pair0 = Pair.create(doubleArray0, integer0);
       boolean boolean0 = simplePointChecker0.converged(3142, pair0, pair0);
@@ -98,7 +98,7 @@ public class AbstractConvergenceChecker_ESTest extends AbstractConvergenceChecke
 
   @Test(timeout = 4000)
   public void test07()  throws Throwable  {
-      SimplePointChecker<Pair<Integer, String>> simplePointChecker0 = new SimplePointChecker<Pair<Integer, String>>((-2691.0), (-2691.0), 1);
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker((-2691.0), (-2691.0), 1);
       Integer integer0 = new Integer((-1));
       Pair<Integer, String> pair0 = new Pair<Integer, String>(integer0, (String) null);
       // Undeclared exception!
@@ -116,7 +116,7 @@ public class AbstractConvergenceChecker_ESTest extends AbstractConvergenceChecke
 
   @Test(timeout = 4000)
   public void test08()  throws Throwable  {
-      SimplePointChecker<Pair<Object, Object>> simplePointChecker0 = new SimplePointChecker<Pair<Object, Object>>(1.0, 1416.14064824, 2);
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker(1.0, 1416.14064824, 2);
       double double0 = simplePointChecker0.getRelativeThreshold();
       assertEquals(1.0, double0, 0.01);
       assertEquals(1416.14064824, simplePointChecker0.getAbsoluteThreshold(), 0.01);
@@ -124,7 +124,7 @@ public class AbstractConvergenceChecker_ESTest extends AbstractConvergenceChecke
 
   @Test(timeout = 4000)
   public void test09()  throws Throwable  {
-      SimplePointChecker<Pair<String, Object>> simplePointChecker0 = new SimplePointChecker<Pair<String, Object>>(0.0, 0.0);
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker(0.0, 0.0);
       double double0 = simplePointChecker0.getAbsoluteThreshold();
       assertEquals(0.0, double0, 0.01);
       assertEquals(0.0, simplePointChecker0.getRelativeThreshold(), 0.01);
@@ -132,7 +132,7 @@ public class AbstractConvergenceChecker_ESTest extends AbstractConvergenceChecke
 
   @Test(timeout = 4000)
   public void test10()  throws Throwable  {
-      SimplePointChecker<Pair<double[], Object>> simplePointChecker0 = new SimplePointChecker<Pair<double[], Object>>(0.0, 0.0);
+      SimplePointChecker<Pair<double[], Object>> simplePointChecker0 = new SimplePointChecker(0.0, 0.0);
       double[] doubleArray0 = new double[2];
       Pair<double[], Object> pair0 = new Pair<double[], Object>(doubleArray0, simplePointChecker0);
       double[] doubleArray1 = new double[0];

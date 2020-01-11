@@ -21,7 +21,7 @@ public class SimplePointChecker_ESTest extends SimplePointChecker_ESTest_scaffol
 
   @Test(timeout = 4000)
   public void test0()  throws Throwable  {
-      SimplePointChecker<Pair<Integer, Object>> simplePointChecker0 = new SimplePointChecker<Pair<Integer, Object>>(0.0, 0.0);
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker(0.0, 0.0);
       Pair<Integer, Object> pair0 = (Pair<Integer, Object>) mock(Pair.class, new ViolatedAssumptionAnswer());
       doReturn((Object) null).when(pair0).getKey();
       Pair<Integer, Object> pair1 = (Pair<Integer, Object>) mock(Pair.class, new ViolatedAssumptionAnswer());
@@ -41,7 +41,7 @@ public class SimplePointChecker_ESTest extends SimplePointChecker_ESTest_scaffol
 
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
-      SimplePointChecker<Pair<Integer, Object>> simplePointChecker0 = new SimplePointChecker<Pair<Integer, Object>>(0.0, 0.0, 2262);
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker(0.0, 0.0, 2262);
       Pair<Integer, Object> pair0 = (Pair<Integer, Object>) mock(Pair.class, new ViolatedAssumptionAnswer());
       boolean boolean0 = simplePointChecker0.converged(3172, pair0, pair0);
       assertTrue(boolean0);
@@ -49,7 +49,7 @@ public class SimplePointChecker_ESTest extends SimplePointChecker_ESTest_scaffol
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
-      SimplePointChecker<Pair<Object, Object>> simplePointChecker0 = new SimplePointChecker<Pair<Object, Object>>(858.58518723799, 858.58518723799, 1);
+      SimplePointChecker simplePointChecker0 = new SimplePointChecker(858.58518723799, 858.58518723799, 1);
       Pair<Object, Object> pair0 = (Pair<Object, Object>) mock(Pair.class, new ViolatedAssumptionAnswer());
       doReturn("").when(pair0).getKey();
       // Undeclared exception!
@@ -67,9 +67,9 @@ public class SimplePointChecker_ESTest extends SimplePointChecker_ESTest_scaffol
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
-      SimplePointChecker<Pair<Integer, Object>> simplePointChecker0 = null;
+      SimplePointChecker simplePointChecker0 = null;
       try {
-        simplePointChecker0 = new SimplePointChecker<Pair<Integer, Object>>((-401.447366561464), 0.0, 0);
+        simplePointChecker0 = new SimplePointChecker((-401.447366561464), 0.0, 0);
         fail("Expecting exception: RuntimeException");
       
       } catch(RuntimeException e) {
